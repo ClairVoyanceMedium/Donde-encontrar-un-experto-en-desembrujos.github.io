@@ -1,42 +1,100 @@
-# Indique aux robots que toutes les pages peuvent être explorées, sauf restrictions spécifiées
+# Robots.txt optimizado para 2025 - Supera la excelencia
+# Diseñado para el mercado hispanohablante, IA, Google IA, asistentes de voz y SEO avanzado
+# Sitio: https://clairvoyancemedium.github.io/Donde-encontrar-un-experto-en-desembrujos.github.io/
+# Última actualización: 09/03/2025 14:00 GMT
+# Nota: Validar con Google Search Console y robotstxt.org
+
+##########################
+# Autorización General   #
+##########################
 User-agent: *
-Disallow: /admin/
-Disallow: /tmp/
-Disallow: /private/
+Disallow: /privado/          # Directorios privados (ej. administración, scripts)
+Disallow: /temporal/         # Carpetas temporales
+Disallow: /*?*               # Evita contenido duplicado (parámetros URL)
+Allow: /*.css$               # CSS para un renderizado óptimo (heredado por todos)
+Allow: /*.js$                # JS esencial (heredado por todos)
+Allow: /*.pdf$               # Autoriza PDFs estratégicos (ej. guías)
+Allow: /                     # Autorización por defecto
 
-# Bloquer des URL avec paramètres inutiles pour l'indexation
-Disallow: /*?debug=true
-Disallow: /*?preview=true
-
-# Permettre les fichiers nécessaires au bon affichage et fonctionnement
-Allow: /css/
-Allow: /js/
-Allow: /images/
-
-# Référencement des ressources multimédias
-Allow: *.png
-Allow: *.jpg
-Allow: *.webp
-Allow: *.css
-Allow: *.js
-
-# Fournir le chemin du fichier sitemap pour une meilleure indexation
-Sitemap: https://www.clairvoyancemedium.com/sitemap.xml
-
-# Autorisation pour les robots Google et Bing pour maximiser les campagnes publicitaires
+########################################
+# Googlebot (incluyendo Google IA 2025)#
+########################################
 User-agent: Googlebot
-Allow: /
-User-agent: AdsBot-Google
-Allow: /
+Disallow: /privado/
+Disallow: /temporal/
+Allow: /rituales/
+Allow: /proteccion/
+Allow: /desembrujos/
+
+###########################################
+# Asistentes de voz                       #
+###########################################
+User-agent: Googlebot-Voice
+Disallow: /privado/
+Disallow: /temporal/
+Allow: /preguntas-frecuentes/
+Allow: /rituales-simples/
+Allow: /consejos/
+User-agent: Amazonbot        # Hipotético para Alexa
+Disallow: /privado/
+Disallow: /temporal/
+Allow: /preguntas-frecuentes/
+Allow: /consejos/
+User-agent: Applebot         # Hipotético para Siri
+Disallow: /privado/
+Disallow: /temporal/
+Allow: /preguntas-frecuentes/
+Allow: /consejos/
+
+###########################################
+# Bing (hispanohablantes fuera de Google) #
+###########################################
 User-agent: Bingbot
-Allow: /
+Disallow: /privado/
+Disallow: /temporal/
 
-# Bloquer les robots nuisibles ou non désirés
-User-agent: BadBot
+#################################
+# Bloqueo de bots indeseados    #
+#################################
+User-agent: AhrefsBot
 Disallow: /
-User-agent: EvilScraper
+User-agent: SemrushBot
+Disallow: /
+User-agent: MJ12bot
 Disallow: /
 
-# Empêcher l'exploration des fichiers sensibles
-Disallow: /config/
-Disallow: /backup/
+##################################################
+# Socios y analizadores de Google                #
+##################################################
+User-agent: Mediapartners-Google
+Disallow: /privado/
+User-agent: AdsBot-Google
+Disallow: /privado/
+
+##################################################
+# Rastreadores IA emergentes (anticipación 2025)#
+##################################################
+User-agent: xAI-Crawler
+Disallow: /privado/
+User-agent: OpenAI-Crawler
+Disallow: /privado/
+User-agent: AnthropicBot
+Disallow: /privado/
+User-agent: Qwantify         # Adaptado para hispanohablantes
+Disallow: /privado/
+
+##################################################
+# Optimización avanzada (prioridad móvil)        #
+##################################################
+User-agent: Googlebot-Mobile
+Disallow: /privado/
+Disallow: /temporal/
+Allow: /rituales/
+Allow: /proteccion/
+Allow: /desembrujos/
+
+##################
+# Sitemap y rastreo #
+##################
+Sitemap: https://clairvoyancemedium.github.io/Donde-encontrar-un-experto-en-desembrujos.github.io/sitemap.xml
+Crawl-delay: 0.5
